@@ -217,6 +217,7 @@ a:focus {
         padding-top: 72px;
         padding-bottom: 48px;
     }
+
 }
 
 /*
@@ -239,6 +240,12 @@ a:focus {
 
 .o-section {
     display: flow-root; /* New solution! Fixes margin collapsing */
+    display: flex;
+    align-items: center;
+}
+
+.o-section__reverse{
+    flex-direction: row-reverse;
 }
 
 .o-section + .o-section {
@@ -413,6 +420,19 @@ a:focus {
 .c-nav__link:hover{
     color: #DBEDFF;
     text-shadow: 0 0 5px #DBEDFF;
+}
+
+.c-link-cta{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 24px;
+    padding: 26px;
+    background-image: linear-gradient(to bottom right, #033AA7, #0053FB);
+    font-size: 14px;
+    font-weight: 600;
+}
+.c-link-cta a:hover{
+    text-shadow: none;
 }
 
 
@@ -738,11 +758,19 @@ a:focus {
     .c-nav__item{
         padding: 0 16px 0 16px;
     }
+
 }
 
 /* Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}
 */
+
+    @media(min-width: 1200){
+        .o-figure__first{
+            flex-basis: calc(100% / 5 * 3) !important;
+        }
+    
+    }
 
 /*
     Print styles.
