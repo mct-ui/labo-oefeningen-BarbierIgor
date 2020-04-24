@@ -42,6 +42,8 @@ html {
     color: white;
 }
 
+
+
 *,
 *:before,
 *:after {
@@ -167,11 +169,11 @@ hr {
 }
 
 a {
-    color: #1195F7;
+    color: white;
     transition: all .1s ease-in-out;
 }
 
-a:visited,
+
 a:active,
 a:hover,
 a:focus {
@@ -393,6 +395,26 @@ a:focus {
 .c-logo__symbol {
     height: 100%;
 }
+
+.c-nav__list{
+    text-transform: uppercase;
+}
+
+.c-nav__list {
+    font-weight: 200;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.c-nav__link{
+    text-decoration: none;
+}
+
+.c-nav__link:hover{
+    color: #DBEDFF;
+    text-shadow: 0 0 5px #DBEDFF;
+}
+
 
 /*------------------------------------*\
   #UTILITIES
@@ -701,6 +723,22 @@ a:focus {
 /* Large devices (landscape tablets, desktops, 992px and up)
 @media (min-width: 992px) {}
 */
+
+@media(min-width: 992px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .c-nav__list{
+        display: flex;
+    }
+
+    .c-nav__item{
+        padding: 0 16px 0 16px;
+    }
+}
 
 /* Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}
